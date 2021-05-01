@@ -58,6 +58,14 @@ export const VideoPreview = styled.video`
   width: 100% !important;
   height: auto !important;
   margin-bottom: -5px;
+
+  /* &::-webkit-media-controls {
+    display:none !important;
+  }
+
+  &::-webkit-media-controls-enclosure {
+    display:none !important;
+  } */
 `
 
 export const VideoControls = styled.div`
@@ -68,9 +76,14 @@ export const VideoControls = styled.div`
   padding: 20px;
   z-index: 1;
   display: none;
+  z-index: 2147483648;
 
   &.show {
     display: block;
+  }
+
+  &:fullscreen {
+    position: fixed; 
   }
 `
 
